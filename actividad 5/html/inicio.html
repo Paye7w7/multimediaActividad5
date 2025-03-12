@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog GTA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'Jersey';
+            src: url('jersey.ttf') format('truetype');
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Jersey', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+        }
+        
+        .game-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            height: 600px;
+            overflow: hidden;
+        }
+        
+        .background-image {
+            width: 100%;
+            height: 100%;
+            background-image: url('../img/gta2.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .dogs-image {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40%;
+            background-image: url('../img/dogs.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom center;
+        }
+        
+        .game-title {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: #2E4053;
+            font-size: 120px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            line-height: 0.8;
+        }
+        
+        .menu-buttons {
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .menu-button {
+            background-color: #2E4053;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            font-size: 24px;
+            font-family: 'Jersey', sans-serif;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        
+        .menu-button i {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="background-image">
+            <div class="game-title">
+                Dog<br>GTA
+            </div>
+            <div class="menu-buttons">
+                <button class="menu-button" onclick="window.location.href='game.html'"><i class="fas fa-play"></i> Iniciar</button>
+                <button class="menu-button" onclick="window.location.href='salir.html'"><i class="fas fa-sign-out-alt"></i> Salir</button>
+            </div>
+            <div class="dogs-image"></div>
+        </div>
+    </div>
+</body>
+</html>
